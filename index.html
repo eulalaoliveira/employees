@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="employees.json"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="title">Employees</h1>
+        <div class="navBar"> 
+            <div id="mainSearch">
+                <p>Search</p>
+            </div>
+            <div id="add">
+                <p>
+                    <a href="addEmployee.html">Add</a>
+                </p>
+            </div>
+        </div>
+        <div class="main-container">
+            <div>
+                <p class="searchNote">Note: All records will be displayed if textbox is empty.</p>
+                <label for="english">Enter employee id, lastname or level:</label>
+                <textarea id="inputText" name="english"></textarea>
+            </div>
+            <button id="searchBtn" class="items" onclick="search()">
+                Search
+            </button>
+            <div id="usuarios">
+                <div id="outputText"></div>
+            </div>
+            <h4 id="teste">Search result:</h4>
+                <table cellspacing="10">
+                    <tr>
+                        <th>ID</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Salary</th>
+                        <th>Level</th>
+                    </tr>
+                    <tr>
+                        <td id="idTable"></td>
+                        <td id="firstNameTable"></td>
+                        <td id="lastNameTable"></td>
+                        <td id="salaryTable"></td>
+                        <td id="levelTable"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

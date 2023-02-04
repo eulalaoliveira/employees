@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="title">Employees</h1>
+        <div class="navBar"> 
+            <div id="search">
+                <p>
+                    <a href="index.html">Search</a>
+                </p>
+            </div>
+            <div id="mainAdd">
+                <p>Add</p>
+            </div>
+        </div>
+        <div class="main-container">
+            <p class="searchNote">Please enter employee details below. All fields are required.</p>
+            
+            <label for="english">Firstname:</label>
+            <textarea id="inputText" name="english" style="margin-bottom: 10px;">
+            </textarea>
+
+            <label for="english">Lastname:</label>
+            <textarea id="inputText" name="english" style="margin-bottom: 10px;">
+            </textarea>
+
+            <label for="english">Salary:</label>
+            <textarea id="inputText" name="english"></textarea>
+        
+            <button id="translateBtn" class="items">
+                Add
+            </button>
+        <!--<div style="margin-top: 10px;">
+            <label for="pigLatin">Translation:</label>
+            <textarea class="response" id="outputText" name="pigLatin" style="margin-top: 0px;"></textarea>
+        </div>-->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
