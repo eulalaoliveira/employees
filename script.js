@@ -21,7 +21,7 @@ searchBtn.onclick = async function () {
         usuario.empLevel == inputText);
 
         console.log(result);
-
+        
         result.forEach(usuario => {
           html += `<tr>
           <td>${usuario.empId}</td>
@@ -43,7 +43,21 @@ searchBtn.onclick = async function () {
         })
       }
     
-    document.querySelector('tbody').innerHTML = html;
-    document.getElementById('infoTable').style.display = 'block'
+    if (inputText.length >= 1) {
+      const result = data.filter(usuario => 
+        usuario.empId == inputText ||
+        usuario.empLastname == inputText || 
+        usuario.empLevel == inputText);
+
+        console.log(result);
+        console.log("entrou aqui");
+
+        if (result == false) {
+          alert("No records found");
+        }
+      }
+    
+      document.querySelector('tbody').innerHTML = html;
+      document.getElementById('infoTable').style.display = 'block'
     
 }
