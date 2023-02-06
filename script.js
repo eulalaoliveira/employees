@@ -42,16 +42,6 @@ searchBtn.onclick = async function () {
           </tr>`;
         })
       }
-
-    /*(data || []).forEach(usuario => {
-      html += `<tr>
-        <td>${usuario.empId}</td>
-        <td>${usuario.empFirstname}</td>
-        <td>${usuario.empLastname}</td>
-        <td>${usuario.empSalary}</td>
-        <td>${usuario.empLevel}</td>
-      </tr>`;
-    });*/
     
     document.querySelector('tbody').innerHTML = html;
     document.getElementById('infoTable').style.display = 'block'
