@@ -15,39 +15,39 @@ searchBtn.onclick = async function () {
 
     //filter by id, lastname and level
     if (inputText.length >= 1) {
-      const result = data.filter(usuario => 
-        usuario.empId == inputText ||
-        usuario.empLastname == inputText || 
-        usuario.empLevel == inputText);
+      const result = data.filter(employee => 
+        employee.empId == inputText ||
+        employee.empLastname == inputText || 
+        employee.empLevel == inputText);
 
         console.log(result);
-        
-        result.forEach(usuario => {
+
+        result.forEach(employee => {
           html += `<tr>
-          <td>${usuario.empId}</td>
-          <td>${usuario.empFirstname}</td>
-          <td>${usuario.empLastname}</td>
-          <td>${usuario.empSalary}</td>
-          <td>${usuario.empLevel}</td>
+          <td>${employee.empId}</td>
+          <td>${employee.empFirstname}</td>
+          <td>${employee.empLastname}</td>
+          <td>${employee.empSalary}</td>
+          <td>${employee.empLevel}</td>
           </tr>`;
         })
       } else {
-        (data || []).forEach(usuario => {
+        (data || []).forEach(employee => {
           html += `<tr>
-            <td>${usuario.empId}</td>
-            <td>${usuario.empFirstname}</td>
-            <td>${usuario.empLastname}</td>
-            <td>${usuario.empSalary}</td>
-            <td>${usuario.empLevel}</td>
+            <td>${employee.empId}</td>
+            <td>${employee.empFirstname}</td>
+            <td>${employee.empLastname}</td>
+            <td>${employee.empSalary}</td>
+            <td>${employee.empLevel}</td>
           </tr>`;
         })
       }
     
     if (inputText.length >= 1) {
-      const result = data.filter(usuario => 
-        usuario.empId == inputText ||
-        usuario.empLastname == inputText || 
-        usuario.empLevel == inputText);
+      const result = data.filter(employee => 
+        employee.empId == inputText ||
+        employee.empLastname == inputText || 
+        employee.empLevel == inputText);
 
         console.log(result);
         console.log("entrou aqui");
@@ -56,7 +56,8 @@ searchBtn.onclick = async function () {
           alert("No records found");
         }
       }
-    
+      
+      console.log(data);
       document.querySelector('tbody').innerHTML = html;
       document.getElementById('infoTable').style.display = 'block'
     
